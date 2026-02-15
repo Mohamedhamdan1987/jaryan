@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jaryan-sewage.com/sitemap.xml
+Sitemap: https://jaryan-sewage.web.app/sitemap.xml
