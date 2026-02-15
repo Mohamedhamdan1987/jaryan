@@ -1,68 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Root Pages -->
     <url>
         <loc>https://jaryan-sewage.com/</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/about.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/services.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/contact.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/articles.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://jaryan-sewage.com/faq.html</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Area Landing Pages -->
+    <url>
+        <loc>https://jaryan-sewage.com/dammam.html</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://jaryan-sewage.com/jubail.html</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://jaryan-sewage.com/khobar.html</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Articles -->
+    <url>
         <loc>https://jaryan-sewage.com/articles/article-1.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/articles/article-2.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/articles/article-3.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/articles/article-4.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/articles/article-5.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://jaryan-sewage.com/articles/article-6.html</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://jaryan-sewage.com/articles/article-7.html</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://jaryan-sewage.com/articles/article-8.html</loc>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
