@@ -39,6 +39,17 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -47,23 +58,46 @@
       "@type": "LocalBusiness",
       "name": "جريان لخدمات الصرف الصحي",
       "image": "https://jaryan-sewage.web.app/images/logo.png",
-      "description": "شركة متخصصة في خدمات الصرف الصحي بالدمام - تسليك المجاري، شفط البيارات، تنظيف وتعقيم",
+      "description": "شركة متخصصة في خدمات الصرف الصحي بالدمام - تسليك المجاري، شفط البيارات، تنظيف وتعقيم. خدمة 24/7 في الدمام والخبر والجبيل",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "الدمام",
         "addressLocality": "الدمام",
         "addressRegion": "المنطقة الشرقية",
+        "postalCode": "",
         "addressCountry": "SA"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "26.4207",
+        "longitude": "50.0888"
+      },
       "telephone": "+966549573700",
+      "email": "info@jaryan-sewage.web.app",
       "priceRange": "$$",
       "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
-      "areaServed": {
-        "@type": "City",
-        "name": "الدمام"
-      },
-      "serviceType": ["تسليك المجاري", "شفط البيارات", "تنظيف وتعقيم"],
-      "url": "https://jaryan-sewage.web.app/"
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "الدمام"
+        },
+        {
+          "@type": "City",
+          "name": "الخبر"
+        },
+        {
+          "@type": "City",
+          "name": "الجبيل"
+        }
+      ],
+      "serviceType": ["تسليك المجاري", "شفط البيارات", "تنظيف وتعقيم", "خدمات الصرف الصحي"],
+      "url": "https://jaryan-sewage.web.app/",
+      "sameAs": [
+        "https://www.facebook.com/share/18JiDWBDeT/",
+        "https://www.instagram.com/mjryshrktslyk",
+        "https://www.tiktok.com/@user412972886556",
+        "https://www.snapchat.com/add/always9462"
+      ]
     }
     </script>
 </head>
@@ -227,30 +261,25 @@
                             <p class="service-desc">تعقيم كامل للمكان للتخلص من الروائح الكريهة.</p>
                         </div>
                 </div>
-                <div style="text-align: center; margin-top: 2rem;">
+                <div class="text-center mt-2">
                     <a href="services.html" class="btn btn-secondary">عرض جميع الخدمات</a>
                 </div>
             </div>
         </section>
 
         <!-- Service Areas Section -->
-        <section id="areas" class="areas-section"
-            style="padding: 60px 0; background-color: var(--light-bg); text-align: center;">
+        <section id="areas" class="areas-section">
             <div class="container">
                 <h2 class="section-title">مناطق الخدمة</h2>
-                <p style="margin-bottom: 2rem; color: var(--text-dark);">نخدمكم في جميع أنحاء المنطقة الشرقية. اختر
-                    منطقتك:</p>
-                <div class="areas-grid" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <a href="dammam.html" class="btn btn-secondary"
-                        style="min-width: 200px; padding: 15px 30px; font-size: 1.2rem;">
+                <p>نخدمكم في جميع أنحاء المنطقة الشرقية. اختر منطقتك:</p>
+                <div class="areas-grid">
+                    <a href="dammam.html" class="btn btn-secondary btn-area">
                         📍 الدمام
                     </a>
-                    <a href="khobar.html" class="btn btn-secondary"
-                        style="min-width: 200px; padding: 15px 30px; font-size: 1.2rem;">
+                    <a href="khobar.html" class="btn btn-secondary btn-area">
                         📍 الخبر
                     </a>
-                    <a href="jubail.html" class="btn btn-secondary"
-                        style="min-width: 200px; padding: 15px 30px; font-size: 1.2rem;">
+                    <a href="jubail.html" class="btn btn-secondary btn-area">
                         📍 الجبيل
                     </a>
                 </div>
@@ -300,6 +329,26 @@
                         واتساب
                     </a>
                 </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/18JiDWBDeT/" class="social-link facebook" target="_blank"
+                        rel="noopener" aria-label="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mjryshrktslyk?igsh=MXV5eXR2Nnl6ZmpxZg=="
+                        class="social-link instagram" target="_blank" rel="noopener" aria-label="إنستغرام">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@user412972886556?_r=1&_t=ZS-93wBavyDL8C" class="social-link tiktok"
+                        target="_blank" rel="noopener" aria-label="تيك توك">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/add/always9462?share_id=W9bWHh36oto&locale=ar-AE"
+                        class="social-link snapchat" target="_blank" rel="noopener" aria-label="سناب شات">
+                        <i class="fab fa-snapchat"></i>
+                    </a>
+                </div>
+
                 <p class="copyright">© 2026 جريان لخدمات الصرف الصحي - الدمام</p>
             </div>
         </section>
