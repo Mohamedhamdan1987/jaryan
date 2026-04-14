@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الوسائط | جريان لتسليك المجاري وخدمات الصرف الصحي</title>
+    <meta name="description"
+        content="شاهد أحدث فيديوهاتنا ومقالاتنا الخدمية من سناب شات، تيك توك، وإنستقرام. معرض وسائط متجدد لخدمات جريان في المنطقة الشرقية.">
+    <link rel="canonical" href="https://jaryan-sewage.com/gallery.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .media-container {
+            width: 100%;
+            min-height: 450px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .media-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .item-info {
+            padding: 15px;
+        }
+
+        .item-platform {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .item-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        /* Admin Form CSS */
+        #adminSection {
+            display: none;
+            margin-top: 60px;
+            padding: 40px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            border: 2px dashed #ccc;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+    <!-- TikTok Pixel Code Start --><script>!function (w, d, t) {  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};  ttq.load("D7F770RC77UB97CQHLUG");  ttq.page();}(window, document, "ttq");</script><!-- TikTok Pixel Code End -->
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <span class="logo-icon">🚛</span>
+                    <span class="logo-text">جريان</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="gallery.html" class="active">المعرض</a></li>
+                    <li><a href="articles.html">المقالات</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px; padding-bottom: 60px;">
+        <div class="container">
+            <h1 style="text-align: center; color: var(--primary-color); margin-bottom: 10px;">معرض الوسائط</h1>
+            <p style="text-align: center; color: var(--text-light);">تابع أحدث أعمالنا وخدماتنا مباشرة من منصات التواصل الاجتماعي</p>
+
+            <div id="galleryContainer" class="gallery-grid">
+                <!-- DYNAMIC ITEMS START HERE -->
+                <div id="dynamicGallery" style="display: contents;">
+                    <!-- Data will be loaded here -->
+                    <div style="grid-column: 1/-1; text-align: center; padding: 50px;" id="loadingIndicator">
+                        <i class="fas fa-spinner fa-spin fa-2x" style="color: var(--secondary-color);"></i>
+                        <p>جاري تحميل المعرض...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Section (Activated by URL hash #admin) -->
+            <section id="adminSection">
+                <h2 style="margin-bottom: 20px;">إضافة محتوى جديد</h2>
+                <form id="addMediaForm">
+                    <div class="form-group">
+                        <label>عنوان المحتوى (اختياري):</label>
+                        <input type="text" id="itemTitle" placeholder="اتركه فارغاً لجلب التفاصيل من الرابط تلقائياً">
+                    </div>
+                    <div class="form-group">
+                        <label>رابط المحتوى أو كود التضمين (Iframe):</label>
+                        <textarea id="itemEmbed" rows="4" style="width:100%; border-radius:5px; border:1px solid #ddd; padding:10px;" required placeholder='ألصق الرابط أو الكود هنا...'></textarea>
+                    </div>
+                    <input type="hidden" id="itemPlatform" value="auto">
+                    
+                    <div style="font-size: 0.85rem; background: #fffde7; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+                        <strong>🚀 سرعة الإضافة:</strong> فقط ألصق الرابط أو كود الـ (iframe) وسيتعرف الموقع على المنصة (فيسبوك، تيك توك، إنستا) تلقائياً.
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">إرسال للموقع</button>
+                    <p id="formMsg" style="margin-top: 10px; font-weight: bold;"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v18.0" nonce="H9nQk2bA"></script>
+
+    <script>
+        // REPLACE WITH YOUR FIREBASE CONFIG
+        const firebaseConfig = {
+            apiKey: "AIzaSyD8_Nxr9mQxR2iuOjncCxoin6vlsyLKOOY",
+            authDomain: "jaryan-sewage.firebaseapp.com",
+            databaseURL: "https://jaryan-sewage-default-rtdb.firebaseio.com",
+            projectId: "jaryan-sewage",
+            storageBucket: "jaryan-sewage.firebasestorage.app",
+            messagingSenderId: "1004220530715",
+            appId: "1:1004220530715:web:5a535db16e9437ddc6b8be"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        // Show admin section if hash is #admin
+        if (window.location.hash === '#admin') {
+            document.getElementById('adminSection').style.display = 'block';
+        }
+
+        // Fetch Data
+        const dynamicGallery = document.getElementById('dynamicGallery');
+        database.ref('gallery').on('value', (snapshot) => {
+            dynamicGallery.innerHTML = '';
+            const data = snapshot.val();
+            if (data) {
+                Object.keys(data).reverse().forEach(key => {
+                    const item = data[key];
+                    const card = createCard(item);
+                    dynamicGallery.appendChild(card);
+                });
+                // Re-parse FB XFBML for dynamic content
+                if (window.FB) {
+                    FB.XFBML.parse();
+                }
+            }
+        });
+
+        function createCard(item) {
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            
+            let contentHtml = '';
+            const hasEmbed = item.embed && item.embed.includes('<iframe');
+            
+            if (hasEmbed) {
+                // Render the Actual Post (Responsive)
+                contentHtml = item.embed
+                    .replace(/width=["'][^"']+["']/gi, 'width="100%"')
+                    .replace(/height=["'][^"']+["']/gi, 'height="300"');
+            } else {
+                // Render a Big Icon for links
+                contentHtml = `
+                    <a href="${item.url}" target="_blank" style="text-decoration:none; color:inherit; width:100%; height:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; background:#f8f9fa;">
+                        <i class="fab fa-${item.platform} fa-5x" style="color: var(--primary-color); margin-bottom:15px;"></i>
+                        <span style="font-weight:bold; color:var(--primary-color);">مشاهدة على ${item.platform}</span>
+                    </a>
+                `;
+            }
+
+            div.innerHTML = `
+                <div class="media-container" style="min-height:300px; border-bottom: 1px solid #eee;">
+                    ${contentHtml}
+                </div>
+                <div class="item-info">
+                    <span class="item-platform">#${item.platform}</span>
+                    <h3 class="item-title">${item.title || (hasEmbed ? 'عرض المنشور' : 'رابط سريع')}</h3>
+                    <a href="${item.url}" target="_blank" class="btn btn-primary" style="padding: 5px 15px; font-size: 0.8rem; margin-top: 10px; display: inline-block;">زيارة المنصة</a>
+                </div>
+            `;
+            return div;
+        }
+
+        // Form Submission
+        document.getElementById('addMediaForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const msg = document.getElementById('formMsg');
+            let input = document.getElementById('itemEmbed').value.trim();
+            const title = document.getElementById('itemTitle').value.trim();
+            
+            let platform = 'facebook';
+            if (input.includes('tiktok.com')) platform = 'tiktok';
+            if (input.includes('instagram.com')) platform = 'instagram';
+            // Handle various FB domains
+            if (input.includes('facebook.com') || input.includes('fb.watch') || input.includes('fb.com')) platform = 'facebook';
+
+            let finalUrl = '';
+            let finalEmbed = '';
+
+            if (input.startsWith('<iframe')) {
+                finalEmbed = input;
+                const srcMatch = input.match(/src="([^"]+)"/);
+                if (srcMatch && srcMatch[1]) {
+                    // Extract URL from src IF it's a FB plugin
+                    const extractedSrc = srcMatch[1];
+                    if (extractedSrc.includes('facebook.com/plugins')) {
+                        const urlParams = new URLSearchParams(extractedSrc.split('?')[1]);
+                        finalUrl = urlParams.get('href') || extractedSrc;
+                    } else {
+                        finalUrl = extractedSrc;
+                    }
+                }
+            } else {
+                finalUrl = input;
+                finalEmbed = ''; // Don't auto-generate iframe anymore per user request
+            }
+
+            if (!finalUrl && !finalEmbed) {
+                msg.innerText = '⚠️ يرجى إدخال رابط أو كود صحيح.';
+                msg.style.color = 'orange';
+                return;
+            }
+
+            btn.disabled = true;
+            msg.innerText = 'جاري الإرسال...';
+            msg.style.color = 'blue';
+
+            const newItem = {
+                title: title,
+                url: finalUrl,
+                embed: finalEmbed,
+                platform: platform,
+                timestamp: Date.now()
+            };
+
+            database.ref('gallery').push(newItem)
+                .then(() => {
+                    msg.innerText = '✅ تم بنجاح! سيظهر الآن في المعرض بتفاصيله.';
+                    msg.style.color = 'green';
+                    document.getElementById('addMediaForm').reset();
+                    btn.disabled = false;
+                })
+                .catch(error => {
+                    msg.innerText = '❌ فشل الإرسال: ' + error.message;
+                    msg.style.color = 'red';
+                    btn.disabled = false;
+                });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About -->
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <span class="logo-icon">🚛</span>
+                        <span class="logo-text">جريان</span>
+                    </div>
+                    <p class="footer-about">
+                        شركة جريان لخدمات الصرف الصحي، خبرة سنوات في تسليك المجاري وشفط البيارات بأحدث التقنيات في الدمام والخبر والجبيل. نلتزم بالسرعة والجودة والأمانة.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="articles.html">المقالات</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Service Areas -->
+                <div class="footer-col">
+                    <h4 class="footer-title">مناطق الخدمة</h4>
+                    <ul class="footer-links">
+                        <li><a href="dammam.html">تسليك مجاري بالدمام</a></li>
+                        <li><a href="khobar.html">تسليك مجاري بالخبر</a></li>
+                        <li><a href="jubail.html">تسليك مجاري بالجبيل</a></li>
+                        <li><a href="articles/article-10.html">تغطية المنطقة الشرقية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <div class="footer-contact">
+                        <a href="tel:+966549573700" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0549573700</span>
+                        </a>
+                        <a href="https://wa.me/966549573700" class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>واتساب</span>
+                        </a>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/18JiDWBDeT/" class="social-link facebook" target="_blank" rel="noopener" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/mjryshrktslyk" class="social-link instagram" target="_blank" rel="noopener" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@user412972886556" class="social-link tiktok" target="_blank" rel="noopener" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.snapchat.com/add/always9462" class="social-link snapchat" target="_blank" rel="noopener" aria-label="سناب شات"><i class="fab fa-snapchat"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 جميع الحقوق محفوظة - شركة جريان لخدمات الصرف الصحي</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

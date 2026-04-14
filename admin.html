@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم | جريان لخدمات الصرف الصحي</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Quill.js CSS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --admin-primary: #0066CC;
+            --admin-bg: #f4f7f6;
+        }
+
+        body {
+            background-color: var(--admin-bg);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .admin-container {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .auth-section, .editor-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        h2 {
+            color: var(--admin-primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        #editor {
+            height: 300px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .btn-admin {
+            width: 100%;
+            padding: 12px;
+            background: var(--admin-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-admin:hover {
+            background: #0052a3;
+        }
+
+        .logout-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 8px 15px;
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #statusMsg {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+        .loading { color: #007bff; }
+    </style>
+    <!-- TikTok Pixel Code Start --><script>!function (w, d, t) {  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};  ttq.load("D7F770RC77UB97CQHLUG");  ttq.page();}(window, document, "ttq");</script><!-- TikTok Pixel Code End -->
+</head>
+
+<body>
+
+    <button id="logoutBtn" class="logout-btn hidden">تسجيل الخروج</button>
+
+    <div class="admin-container">
+        <!-- Auth Section -->
+        <section id="authSection" class="auth-section">
+            <h2>تسجيل دخول الإدارة</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>البريد الإلكتروني:</label>
+                    <input type="email" id="email" required placeholder="admin@example.com">
+                </div>
+                <div class="form-group">
+                    <label>كلمة المرور:</label>
+                    <input type="password" id="password" required placeholder="********">
+                </div>
+                <button type="submit" class="btn-admin">دخول</button>
+            </form>
+        </section>
+
+        <!-- Editor Section -->
+        <section id="editorSection" class="editor-section hidden">
+            <h2>إضافة مقال جديد</h2>
+            <form id="articleForm">
+                <div class="form-group">
+                    <label>عنوان المقال:</label>
+                    <input type="text" id="title" required placeholder="أدخل عنوان المقال">
+                </div>
+                <div class="form-group">
+                    <label>وصف الميتا (Meta Description):</label>
+                    <textarea id="metaDescription" rows="3" required placeholder="وصف ترويجي مختصر لمحركات البحث"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>رابط الصورة الأساسية:</label>
+                    <input type="url" id="imageUrl" required placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-group">
+                    <label>المحتوى:</label>
+                    <div id="editor"></div>
+                </div>
+                <button type="submit" class="btn-admin">حفظ ونشر المقال</button>
+            </form>
+        </section>
+
+        <p id="statusMsg"></p>
+    </div>
+
+    <!-- Quill.js JS -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+    <script type="module">
+        import { auth, db } from './js/firebase-config.js';
+        import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+        import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+        // DOM Elements
+        const authSection = document.getElementById('authSection');
+        const editorSection = document.getElementById('editorSection');
+        const loginForm = document.getElementById('loginForm');
+        const articleForm = document.getElementById('articleForm');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const statusMsg = document.getElementById('statusMsg');
+
+        // Initialize Quill
+        const quill = new Quill('#editor', {
+            theme: 'snow',
+            modules: {
+                toolbar: [
+                    [{ 'header': [1, 2, 3, false] }],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                    [{ 'direction': 'rtl' }],
+                    ['link', 'image', 'clean']
+                ]
+            },
+            placeholder: 'اكتب محتوى المقال هنا...'
+        });
+
+        // Auth State Listener
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                authSection.classList.add('hidden');
+                editorSection.classList.remove('hidden');
+                logoutBtn.classList.remove('hidden');
+            } else {
+                authSection.classList.remove('hidden');
+                editorSection.classList.add('hidden');
+                logoutBtn.classList.add('hidden');
+            }
+        });
+
+        // Login Handler
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            showStatus('جاري تسجيل الدخول...', 'loading');
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                showStatus('تم الدخول بنجاح!', 'success');
+            } catch (error) {
+                showStatus('فشل الدخول: ' + error.message, 'error');
+            }
+        });
+
+        // Logout Handler
+        logoutBtn.addEventListener('click', () => {
+            signOut(auth);
+        });
+
+        // Save Article Handler
+        articleForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const metaDescription = document.getElementById('metaDescription').value;
+            const imageUrl = document.getElementById('imageUrl').value;
+            const content = quill.root.innerHTML; // Get HTML from Quill
+
+            if (quill.getText().trim().length === 0) {
+                showStatus('يرجى كتابة محتوى للمقال', 'error');
+                return;
+            }
+
+            showStatus('جاري حفظ المقال...', 'loading');
+            console.log("Attempting to save article:", { title, imageUrl });
+            
+            try {
+                const docRef = await addDoc(collection(db, "articles"), {
+                    title: title,
+                    metaDescription: metaDescription,
+                    imageUrl: imageUrl,
+                    content: content,
+                    timestamp: serverTimestamp()
+                });
+                
+                console.log("Article saved successfully with ID:", docRef.id);
+                showStatus('✅ تم حفظ ونشر المقال بنجاح! ID: ' + docRef.id, 'success');
+                articleForm.reset();
+                quill.setContents([]);
+            } catch (error) {
+                console.error("Firestore Save Error Detailed:", error);
+                showStatus('❌ حدث خطأ أثناء الحفظ: ' + error.message, 'error');
+            }
+        });
+
+        function showStatus(msg, type) {
+            statusMsg.innerText = msg;
+            statusMsg.className = type;
+        }
+    </script>
+</body>
+
+</html>

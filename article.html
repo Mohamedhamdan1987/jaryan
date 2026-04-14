@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags (Default) -->
+    <title id="pageTitle">جاري التحميل... | جريان لخدمات الصرف الصحي</title>
+    <meta id="metaDesc" name="description" content="جاري تحميل المقال من جريان لخدمات الصرف الصحي بالدمام والخبر والمنطقة الشرقية.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .article-page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            background: #f9f9f9;
+        }
+
+        .article-main-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .article-body {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .article-body h2, .article-body h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+        }
+
+        .loading-container, .error-container {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .error-container h2 {
+            color: #dc3545;
+        }
+    </style>
+    <!-- TikTok Pixel Code Start --><script>!function (w, d, t) {  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};  ttq.load("D7F770RC77UB97CQHLUG");  ttq.page();}(window, document, "ttq");</script><!-- TikTok Pixel Code End -->
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <span class="logo-icon">🚛</span>
+                    <span class="logo-text">جريان</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="gallery.html">المعرض</a></li>
+                    <li><a href="articles.html">المقالات</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <!-- Spinner Container -->
+        <div id="loading" class="loading-container">
+            <i class="fas fa-spinner fa-spin fa-3x" style="color: var(--secondary-color);"></i>
+            <p style="margin-top: 20px;">جاري تحميل تفاصيل المقال...</p>
+        </div>
+
+        <!-- Article content (Hidden by default) -->
+        <div id="articleContent" class="hidden" style="display: none;">
+            <section class="article-page-header">
+                <div class="container">
+                    <div id="breadcrumb" class="article-meta">
+                        <a href="index.html">الرئيسية</a> > <a href="articles.html">المقالات</a> > <span id="breadTitle"></span>
+                    </div>
+                    <h1 id="articleTitle" class="hero-title" style="color: var(--primary-color); text-align: right; margin-bottom: 20px;"></h1>
+                    <div class="article-meta">
+                        <span id="articleDate"><i class="far fa-calendar-alt"></i> </span>
+                    </div>
+                    <img id="mainImage" class="article-main-image" src="" alt="">
+                    <div id="content" class="article-body"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Error Container -->
+        <div id="errorMessage" class="error-container hidden" style="display: none;">
+            <h2>عذراً، المقال غير موجود</h2>
+            <p>يبدو أن الرابط الذي اتبعته غير صحيح أو أن المقال تم حذفه.</p>
+            <a href="articles.html" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">العودة لجميع المقالات</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About -->
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <span class="logo-icon">🚛</span>
+                        <span class="logo-text">جريان</span>
+                    </div>
+                    <p class="footer-about">
+                        شركة جريان لخدمات الصرف الصحي، خبرة سنوات في تسليك المجاري وشفط البيارات بأحدث التقنيات في الدمام والخبر والجبيل. نلتزم بالسرعة والجودة والأمانة.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="articles.html">المقالات</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Service Areas -->
+                <div class="footer-col">
+                    <h4 class="footer-title">مناطق الخدمة</h4>
+                    <ul class="footer-links">
+                        <li><a href="dammam.html">تسليك مجاري بالدمام</a></li>
+                        <li><a href="khobar.html">تسليك مجاري بالخبر</a></li>
+                        <li><a href="jubail.html">تسليك مجاري بالجبيل</a></li>
+                        <li><a href="articles/article-10.html">تغطية المنطقة الشرقية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <div class="footer-contact">
+                        <a href="tel:+966549573700" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0549573700</span>
+                        </a>
+                        <a href="https://wa.me/966549573700" class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>واتساب</span>
+                        </a>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/18JiDWBDeT/" class="social-link facebook" target="_blank" rel="noopener" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/mjryshrktslyk" class="social-link instagram" target="_blank" rel="noopener" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@user412972886556" class="social-link tiktok" target="_blank" rel="noopener" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.snapchat.com/add/always9462" class="social-link snapchat" target="_blank" rel="noopener" aria-label="سناب شات"><i class="fab fa-snapchat"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 جميع الحقوق محفوظة - شركة جريان لخدمات الصرف الصحي</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK & Script -->
+    <script type="module">
+        import { db } from './js/firebase-config.js';
+        import { doc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+        async function loadArticle() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+
+            if (!articleId) {
+                showError();
+                return;
+            }
+
+            try {
+                const docRef = doc(db, "articles", articleId);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    renderArticle(data, articleId);
+                } else {
+                    showError();
+                }
+            } catch (error) {
+                console.error("Error fetching article:", error);
+                showError();
+            }
+        }
+
+        function renderArticle(data, id) {
+            // Update UI elements
+            document.getElementById('articleTitle').innerText = data.title;
+            document.getElementById('breadTitle').innerText = data.title;
+            document.getElementById('mainImage').src = data.imageUrl;
+            document.getElementById('mainImage').alt = data.title;
+            document.getElementById('content').innerHTML = data.content;
+            
+            if (data.timestamp) {
+                const date = data.timestamp.toDate();
+                document.getElementById('articleDate').innerHTML += date.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+
+            // SEO Updates
+            document.title = data.title + " | جريان";
+            document.querySelector('meta[name="description"]').setAttribute("content", data.metaDescription);
+            
+            // Add Schema Markup (JSON-LD)
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": data.title,
+                "description": data.metaDescription,
+                "image": data.imageUrl,
+                "author": {
+                    "@type": "Organization",
+                    "name": "جريان لخدمات الصرف الصحي"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "جريان",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://jaryan-sewage.com/images/logo.png"
+                    }
+                },
+                "datePublished": data.timestamp ? data.timestamp.toDate().toISOString() : new Date().toISOString()
+            };
+
+            const script = document.createElement('script');
+            script.type = "application/ld+json";
+            script.text = JSON.stringify(schemaData);
+            document.head.appendChild(script);
+
+            // Toggle visibility
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('articleContent').style.display = 'block';
+        }
+
+        function showError() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'block';
+            document.title = "المقال غير موجود | جريان";
+        }
+
+        // Initialize
+        loadArticle();
+    </script>
+</body>
+
+</html>
