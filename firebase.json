@@ -1,6 +1,9 @@
 {
     "hosting": {
         "public": ".",
+        "redirects": [
+            { "source": "/dammam.html", "destination": "/ahsa.html", "type": 301 }
+        ],
         "ignore": [
             "firebase.json",
             "**/.*",

@@ -100,5 +100,5 @@ if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
 // Console Message
 // ===================================
 console.log('%cجريان لخدمات الصرف الصحي', 'font-size: 20px; font-weight: bold; color: #0066CC;');
-console.log('%cنصلك أينما كنت في الدمام 🚰', 'font-size: 14px; color: #25D366;');
-console.log('%cللتواصل: 0549573700', 'font-size: 12px;');
+console.log('%cنصلك أينما كنت في الأحساء 🚰', 'font-size: 14px; color: #25D366;');
+console.log('%cللتواصل: 0509398580', 'font-size: 12px;');
